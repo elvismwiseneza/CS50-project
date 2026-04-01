@@ -18,4 +18,3 @@ I thought about adding more features like user accounts, priorities, comments, o
 
 To run the project, open a terminal in `C:\Users\Bench06\Documents\CS50 project` and run `py app.py`. Then open `http://127.0.0.1:8000` in your browser. The database file will be created automatically the first time the app starts. No extra packages are needed.
 
-I also added notes in the code comments about AI help. CS50 allows AI tools for the final project as helpers, but the work and understanding still need to be my own.
