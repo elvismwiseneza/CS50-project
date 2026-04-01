@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Tech Help Desk Lite</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <p class="eyebrow">CS50 Final Project</p>
+        <h2>Campus Tech Help Desk Lite</h2>
+        <p class="hero-copy">
+          A small web app for reporting campus tech problems like broken
+          projectors, weak Wi-Fi, or lab computer issues.
+        </p>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Report a New Issue</h2>
+            <p>Keep it short and clear so the next person can act on it.</p>
+          </div>
+          <span class="badge">Python + JavaScript + SQLite</span>
+        </div>
+
+        <form id="issue-form" class="issue-form">
+          <label>
+            Issue title
+            <input id="title" name="title" type="text" maxlength="120" placeholder="Projector not working" required />
+          </label>
+
+          <label>
+            Location
+            <input id="location" name="location" type="text" maxlength="120" placeholder="Science Hall Room 204" required />
+          </label>
+
+          <label>
+            Category
+            <select id="category" name="category" required>
+              <option value="">Choose one</option>
+              <option>Wi-Fi</option>
+              <option>Projector</option>
+              <option>Computer Lab</option>
+              <option>Account Access</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label class="full-width">
+            Details
+            <textarea id="details" name="details" rows="4" maxlength="400" placeholder="What happened, and what did you already try?" required></textarea>
+          </label>
+
+          <button type="submit" class="primary-button">Submit Issue</button>
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Current Issues</h2>
+            <p id="issue-summary">Loading issues...</p>
+          </div>
+          <div class="filters" role="tablist" aria-label="Issue filters">
+            <button class="filter-button active" data-filter="open" type="button">Open</button>
+            <button class="filter-button" data-filter="resolved" type="button">Resolved</button>
+            <button class="filter-button" data-filter="all" type="button">All</button>
+          </div>
+        </div>
+
+        <div id="issue-list" class="issue-list"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
