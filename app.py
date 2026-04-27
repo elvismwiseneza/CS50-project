@@ -256,9 +256,11 @@ class CampusHelpDeskHandler(BaseHTTPRequestHandler):
 
 def run_server() -> None:
     initialize_database()
+    host = os.environ.get("HOST", "0.0.0.0")
     port = int(os.environ.get("PORT", "8000"))
-    server = ThreadingHTTPServer(("127.0.0.1", port), CampusHelpDeskHandler)
-    print(f"Campus Tech Help Desk Lite running at http://127.0.0.1:{port}")
+    server = ThreadingHTTPServer((host, port), CampusHelpDeskHandler)
+    display_host = "127.0.0.1" if host == "0.0.0.0" else host
+    print(f"Campus Tech Help Desk Lite running at http://{display_host}:{port}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

@@ -1,7 +1,5 @@
 /*
-AI assistance note:
-This file was scaffolded with the help of OpenAI Codex and then reviewed
-and adjusted by the student for the final project submission.
+This file was done with the help of OpenAI Codex and was adjusted for my final project submission.
 */
 
 const issueForm = document.querySelector("#issue-form");
