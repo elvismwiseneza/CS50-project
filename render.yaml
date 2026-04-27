@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: campus-tech-help-desk-lite
+    env: docker
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true

@@ -29,6 +29,6 @@ docker run -p 8000:8000 campus-help-desk-lite
 
 Then open `http://127.0.0.1:8000`.
 
-This app now uses the `host` and `PORT` environment variables, so it can run on other machines and on a hosting service, not only on my computer. GitHub stores the code, but GitHub alone does not run Python web apps for visitors. To make it live for everyone online, this repo can be deployed on any service that supports Python or Docker.
+This app now uses the `HOST` and `PORT` environment variables, so it can run on other machines and on a hosting service, not only on my computer. GitHub stores the code, but GitHub alone does not run Python web apps for visitors. To make it live for everyone online, this repo can be deployed on any service that supports Python or Docker. I also added a `render.yaml` file so the repo is ready for Render deployment.
 
 I also added AI notes in the code comments because CS50 allows AI tools as helpers for the final project, as long as the work and understanding are still my own.
